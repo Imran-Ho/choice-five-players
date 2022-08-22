@@ -9,6 +9,8 @@
 
 }
 
+
+
 document.getElementById('babar-btn').addEventListener('click', function(){
     const playersSelectionList = document.getElementById('players-list');
     const playersSelection = document.getElementById('babar');
@@ -18,6 +20,14 @@ document.getElementById('babar-btn').addEventListener('click', function(){
     playersSelectionList.appendChild(createList);
 
 })
+// this is a unique function for calling 
+
+function filterElement (uniqueId){
+    const uniqueElement = document.getElementById(uniqueId);
+    const uniqueElementString = uniqueElement.value;
+    const uniqueElementFigure = parseInt(uniqueElementString);
+    return uniqueElementFigure;
+}
 
 document.getElementById('calc-btn').addEventListener('click',function(){
     const playerListedId = document.getElementById('players-list');
