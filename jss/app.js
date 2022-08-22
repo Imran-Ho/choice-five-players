@@ -1,18 +1,29 @@
 
 
-
-
-
-
-document.getElementById('babar-btn').addEventListener('click', function(){
+ function handleOnClick (item){
     const playersSelectionList = document.getElementById('players-list');
-    const playersSelection = document.getElementById('babar');
+    const playersSelection = document.getElementById(item);
     const createList =document.createElement('li');
     createList.innerText = playersSelection.innerText;
-    createList.classList.add('item');
     playersSelectionList.appendChild(createList);
+    // const liChildren = playersSelectionList.getElementsByTagName('*').length;
+    // if (liChildren > '6'){
+    //     return"Please Select only 5 players"
+    // }
 
-})
+}
+
+
+
+// document.getElementById('babar-btn').addEventListener('click', function(){
+//     const playersSelectionList = document.getElementById('players-list');
+//     const playersSelection = document.getElementById('babar');
+//     const createList =document.createElement('li');
+//     createList.innerText = playersSelection.innerText;
+//     createList.classList.add('item');
+//     playersSelectionList.appendChild(createList);
+
+// })
 // this is a unique function for calling 
 
 function filterElement (uniqueId){
