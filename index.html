@@ -28,9 +28,9 @@
                             <div class="card" style="width: 15rem;">
                                 <img src="players-images/shakib.webp" class="card-img-top" alt="...">
                                 <div class="card-body">
-                                <h5 class="card-title">Shakib-Al-Hasan</h5>
+                                <h5 id="shakib" class="card-title">Shakib-Al-Hasan</h5>
                                 <p class="card-text">Captain of Bangladesh Cricket Team.</p>
-                                <button class="btn btn-primary d-grid col-8 mx-auto">Select</button>
+                                <button class="btn btn-primary d-grid col-8 mx-auto" onclick="handleOnClick()">Select</button>
                                 </div>
                             </div>
                         </div>
@@ -38,9 +38,9 @@
                             <div class="card" style="width: 15rem;">
                                 <img src="players-images/babar.webp" class="card-img-top" alt="...">
                                 <div class="card-body">
-                                <h5 class="card-title">Babar Azam</h5>
+                                <h5 id="babar" class="card-title">Babar Azam</h5>
                                 <p class="card-text">Captain of Pakistan Cricket Team.</p>
-                                <button class="btn btn-primary d-grid col-8 mx-auto">Select</button>
+                                <button class="btn btn-primary d-grid col-8 mx-auto" id="babar-btn">Select</button>
                                 </div>
                             </div>
                         </div>
@@ -96,7 +96,7 @@
                         <div class="card mb-4" style="width: 15rem; height: 20rem;">
                             <h4>Take Five</h4>
                             <div>
-                                <ol>
+                                <ol id="players-list">
 
                                 </ol>
                             </div>
@@ -109,22 +109,22 @@
                                 <h6 class="pe-2">Per Player:</h6>
                                 <input class="" style="width: 5rem;" type="number" placeholder="2000">
                             </div>
-                            <button class="btn btn-success text-white fw-bold d-grid col-8 mx-auto my-3">Calculate</button>
+                            <button id="calc-btn" class="btn btn-success text-white fw-bold d-grid col-8 mx-auto my-3">Calculate</button>
                             <div class="d-flex justify-content-center mb-3">
-                                <h5 class="pe-2">Player Expense:<span>10000</span> </h5>
+                                <h5 class="pe-2">Player Expenses:<span id="player-expense">10000</span> </h5>
                             </div>
                             <div class="d-flex justify-content-center mb-3">
                                 <h6 class="pe-2">Manager:</h6>
-                                <input class="" style="width: 5rem;" type="number" placeholder="5000">
+                                <input id="manager-expense" class="" style="width: 5rem;" type="number" placeholder="5000">
                             </div>
                             <div class="d-flex justify-content-center mb-3">
                                 <h6 class="pe-2">Coach:</h6>
-                                <input class="" style="width: 5rem;" type="number" placeholder="10000">
+                                <input id="coach-expense" class="" style="width: 5rem;" type="number" placeholder="10000">
                             </div>
-                            <button class="btn btn-success text-white fw-bold d-grid col-8 mx-auto mb-3">Calculate Total</button>
+                            <button id="totalCalc-btn" class="btn btn-success text-white fw-bold d-grid col-8 mx-auto mb-3">Calculate Total</button>
                             <div class="d-flex justify-content-between mb-3 px-2">
                                 <h6 class="pe-2">Player Expense:</h6>
-                                <h5>$<span>10000</span></h5>
+                                <h5>$<span id="total">10000</span></h5>
                             </div>
                             
                         </div>
