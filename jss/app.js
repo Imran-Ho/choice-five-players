@@ -47,10 +47,6 @@ document.getElementById('calc-btn').addEventListener('click',function(){
 
     const perPlayerSection = filterElement('per-player-amount');
 
-    // const perPlayerId = document.getElementById('per-player-amount');
-    // const perPlayerAmountString = perPlayerId.value;
-    // const perPlayerAmount = parseInt(perPlayerAmountString);
-
     const playersTotalId = document.getElementById('player-expense');
     const playersTotal = playerListedString * perPlayerSection;
     playersTotalId.innerText = playersTotal;
@@ -63,30 +59,11 @@ document.getElementById('totalCalc-btn').addEventListener('click',function(){
 
     const playerExpense = filterElementInnerText('player-expense');
 
-    // const playerExpense = document.getElementById('player-expense');
-    // const playerExpenseString = playerExpense.innerText;
-    // const previousPlayerExpense = parseInt(playerExpenseString);
     const managerExpense = filterElement('manager-expense');
-    // const managerExpense = document.getElementById('manager-expense');
-    // const managerExpenseString = managerExpense.value;
-    // const managerSalary = parseInt (managerExpenseString);
-
+    
     const coachExpense = filterElement('coach-expense')
-    // const coachExpense = document.getElementById('coach-expense');
-    // const coachExpenseString = coachExpense.value;
-    // const coachSalary = parseInt(coachExpenseString);
 
     const totalElement = document.getElementById('total');
     const totalFigure = playerExpense + managerExpense + coachExpense;
     totalElement.innerText = totalFigure;
 })
-
-
-
-
-// document.getElementById('calc-btn').addEventListener('click', function(){
-//     const selectedPlayers = document.querySelectorAll('.players-list');
-//      = selectedPlayers
-//     console.log('li list')
-
-// })
