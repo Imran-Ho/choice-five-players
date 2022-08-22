@@ -1,13 +1,6 @@
 
 
- function handleOnClick (){
-    const playersSelectionList = document.getElementById('players-list');
-    const playersSelection = document.getElementById('shakib');
-    const createList =document.createElement('li');
-    createList.innerText = playersSelection.innerText;
-    playersSelectionList.appendChild(createList);
 
-}
 
 
 
