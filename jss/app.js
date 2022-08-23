@@ -1,62 +1,50 @@
 
+    let buttonClick = 0;
 
- function handleOnClick (item, item2){
-    const playersSelectionList = document.getElementById('players-list');
-    const playersSelection = document.getElementById(item);
-    const createList =document.createElement('li');
-    createList.innerText = playersSelection.innerText;
-    playersSelectionList.appendChild(createList);
-    const liChildren = playersSelectionList.getElementsByTagName('*').length;
-    const buttonItems = document.getElementById(item2);
-    buttonItems.disabled = true
+ function handleOnClick (item, btn){ 
+    const button = document.getElementById(btn);
+    button.disabled = true;
+    button.style.backgroundColor = '#A2A9AF';
 
-    if (liChildren == '6' ){
+    buttonClick ++;
+    if(buttonClick > 5){
+        button.disabled = false;
+        button.style.backgroundColor = '#015196';
         alert('please select only five players');
-    }   
-}
+        buttonClick = 5;
+        return;
+    }
 
+    const playerName = document.getElementById(item);
+    const playersSelectionField = document.getElementById('players-list');
+    const createList =document.createElement('p');
+    let number = buttonClick;
+    createList.innerText = number + ". " + playerName.innerText;
+    playersSelectionField.appendChild(createList);
 
-// this is a unique function for calling 
-
-function filterElement (uniqueId){
-    const uniqueElement = document.getElementById(uniqueId);
-    const uniqueElementString = uniqueElement.value;
-    const uniqueElementFigure = parseInt(uniqueElementString);
-    return uniqueElementFigure;
-}
-function filterElementInnerText (uniqueIdText){
-    const uniqueElementText = document.getElementById(uniqueIdText);
-    const uniqueElementTextString = uniqueElementText.innerText;
-    const uniqueElementTextFigure = parseInt(uniqueElementTextString);
-    return uniqueElementTextFigure;
 }
 
 // Calculate player section
 
 document.getElementById('calc-btn').addEventListener('click',function(){
-    const playerListedId = document.getElementById('players-list');
-    const allChildren = playerListedId.getElementsByTagName('*').length;
-    const playerListedString = parseInt(allChildren);
-
+    //playerField called.
     const perPlayerSection = filterElement('per-player-amount');
-
-    const playersTotalId = document.getElementById('player-expense');
-    const playersTotal = playerListedString * perPlayerSection;
-    playersTotalId.innerText = playersTotal;
-    
+    // Multiply with Players.
+    const calculateTotal = perPlayerSection * buttonClick;
+    const playerAmountField = document.getElementById('player-expense');
+    playerAmountField.innerText = calculateTotal;
 })
-
 
 // Expenditure section for total amount
 
 document.getElementById('totalCalc-btn').addEventListener('click',function(){
-
+    //player Expense called.
     const playerExpense = filterElementInnerText('player-expense');
-
+    //Manager Expense called.
     const managerExpense = filterElement('manager-expense');
-    
+    //Coach Expense called.
     const coachExpense = filterElement('coach-expense')
-
+    //Added all expenses.
     const totalElement = document.getElementById('total');
     const totalFigure = playerExpense + managerExpense + coachExpense;
     totalElement.innerText = totalFigure;
