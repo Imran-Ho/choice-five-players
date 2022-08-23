@@ -11,28 +11,11 @@
     buttonItems.disabled = true
 
     if (liChildren == '6' ){
-
         alert('please select only five players');
     }   
 }
 
-// const button = document.querySelectorAll('#btn-add');
-// const disableButton = () => {
-//     button.disabled = true;
-// }
-// button.addEventListener('click', disableButton);
 
-
-
-// document.getElementById('babar-btn').addEventListener('click', function(){
-//     const playersSelectionList = document.getElementById('players-list');
-//     const playersSelection = document.getElementById('babar');
-//     const createList =document.createElement('li');
-//     createList.innerText = playersSelection.innerText;
-//     createList.classList.add('item');
-//     playersSelectionList.appendChild(createList);
-
-// })
 // this is a unique function for calling 
 
 function filterElement (uniqueId){
@@ -48,6 +31,8 @@ function filterElementInnerText (uniqueIdText){
     return uniqueElementTextFigure;
 }
 
+// Calculate player section
+
 document.getElementById('calc-btn').addEventListener('click',function(){
     const playerListedId = document.getElementById('players-list');
     const allChildren = playerListedId.getElementsByTagName('*').length;
@@ -62,7 +47,8 @@ document.getElementById('calc-btn').addEventListener('click',function(){
 })
 
 
-// total amount
+// Expenditure section for total amount
+
 document.getElementById('totalCalc-btn').addEventListener('click',function(){
 
     const playerExpense = filterElementInnerText('player-expense');

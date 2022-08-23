@@ -84,6 +84,36 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="col">
+                            <div class="card" style="width: 15rem;">
+                                <img src="players-images/guptil.webp" class="card-img-top" height="50%" alt="...">
+                                <div class="card-body">
+                                <h5 id="guptil" class="card-title">Martin Guptill</h5>
+                                <p class="card-text">Captain of New Zeland Cricket Team.</p>
+                                <button id="guptil-btn" class="btn btn-primary d-grid col-8 mx-auto" onclick="handleOnClick('guptil', 'guptil-btn')">Select</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card" style="width: 15rem;">
+                                <img src="players-images/musfique.webp" class="card-img-top" height="50%" alt="...">
+                                <div class="card-body">
+                                <h5 id="musfique" class="card-title">Musfiqur Rahim</h5>
+                                <p class="card-text">Captain of Bangladesh Cricket Team.</p>
+                                <button id="musfique-btn" class="btn btn-primary d-grid col-8 mx-auto" onclick="handleOnClick('musfique', 'musfique-btn')">Select</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card" style="width: 15rem;">
+                                <img src="players-images/david.webp" class="card-img-top" height="50%" alt="...">
+                                <div class="card-body">
+                                <h5 id="milar" class="card-title">David Milar </h5>
+                                <p class="card-text">Captain of Australia Cricket Team.</p>
+                                <button id="milar-btn" class="btn btn-primary d-grid col-8 mx-auto" onclick="handleOnClick('milar', 'milar-btn')">Select</button>
+                                </div>
+                            </div>
+                        </div>
                     </div>
 
               </div>
@@ -94,7 +124,7 @@
                 <div class="row">
                     <div class="col">
                         <div class="card mb-4" style="width: 15rem; height: 15rem;">
-                            <h4>Take Five</h4>
+                            <h4 class="text-primary">Take Five</h4>
                             <div>
                                 <ol id="players-list">
 
@@ -104,27 +134,27 @@
                     </div>
                     <div class="col">
                         <div class="card" style="width: 15rem; height: 26rem;">
-                            <h4 class="mb-5">Expenditure</h4>
+                            <h4 class="mb-5 text-primary">Expenditure</h4>
                             <div class="d-flex justify-content-center">
                                 <h6 class="pe-2">Per Player:</h6>
-                                <input id="per-player-amount" class="" style="width: 5rem;" type="number" placeholder="2000">
+                                <input id="per-player-amount" class="" style="width: 7rem;" type="number" placeholder="put amount">
                             </div>
                             <button id="calc-btn" class="btn btn-success text-white fw-bold d-grid col-8 mx-auto my-3">Calculate</button>
                             <div class="d-flex justify-content-center mb-3">
-                                <h5 class="pe-2">Player Expenses:<span id="player-expense">10000</span> </h5>
+                                <h5 class="pe-2">Player Expenses:<span id="player-expense">00</span> </h5>
                             </div>
                             <div class="d-flex justify-content-center mb-3">
                                 <h6 class="pe-2">Manager:</h6>
-                                <input id="manager-expense" class="" style="width: 5rem;" type="number" placeholder="5000">
+                                <input id="manager-expense" class="" style="width: 7rem;" type="number" placeholder="put amount">
                             </div>
                             <div class="d-flex justify-content-center mb-3">
                                 <h6 class="pe-2">Coach:</h6>
-                                <input id="coach-expense" class="" style="width: 5rem;" type="number" placeholder="10000">
+                                <input id="coach-expense" class="" style="width: 7rem;" type="number" placeholder="put amount">
                             </div>
                             <button id="totalCalc-btn" class="btn btn-success text-white fw-bold d-grid col-8 mx-auto mb-3">Calculate Total</button>
                             <div class="d-flex justify-content-between mb-3 px-2">
                                 <h6 class="pe-2">Player Expense:</h6>
-                                <h5>$<span id="total">10000</span></h5>
+                                <h5>$<span id="total">00</span></h5>
                             </div>
                             
                         </div>
