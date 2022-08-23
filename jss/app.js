@@ -1,18 +1,26 @@
 
 
- function handleOnClick (item){
+ function handleOnClick (item, item2){
     const playersSelectionList = document.getElementById('players-list');
     const playersSelection = document.getElementById(item);
     const createList =document.createElement('li');
     createList.innerText = playersSelection.innerText;
     playersSelectionList.appendChild(createList);
     const liChildren = playersSelectionList.getElementsByTagName('*').length;
+    const buttonItems = document.getElementById(item2);
+    buttonItems.disabled = true
+
     if (liChildren == '6' ){
-        alert('put a big amount');
-        return liChildren;
-    }
-    
+
+        alert('please select only five players');
+    }   
 }
+
+// const button = document.querySelectorAll('#btn-add');
+// const disableButton = () => {
+//     button.disabled = true;
+// }
+// button.addEventListener('click', disableButton);
 
 
 
